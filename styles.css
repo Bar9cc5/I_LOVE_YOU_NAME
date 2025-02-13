@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: fixed;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover; 
+  background-position: center; 
+  z-index: -1; 
+  background-image: url(images.png);
+  width: 100%; 
+  height: 100%; 
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 0, 0);
+  transform: rotate(-45deg);
+  margin: 0 auto 20px;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: #fff; /* Цвет текста */
+}
+
+.text span {
+  display: inline-block;
+}
+
+.link {
+    display: block; /* Для того чтобы ссылки занимали всю ширину */
+    font-size: 1.5rem; /* Размер шрифта для ссылок */
+    text-decoration: none; /* Убрать подчеркивание */
+    opacity: 0; /* Скрываем ссылки для анимации */
+    
+}
+
+.red-link {
+    color: rgb(255, 255, 255); /* Красный цвет для первой ссылки */
+    background-color:rgb(255, 0, 0);
+    padding: 5px 0px;
+    border-radius: 100px;
+}
+
+.red-link:hover {
+  background-color: rgb(190, 0, 0)
+}
+
+.green-link {
+    color: rgb(249, 255, 249); /* Зелёный цвет для второй ссылки */
+    background-color: rgb(51, 255, 0);
+    padding: 5px 0px;
+    border-radius: 100px;
+}
+
+
+.green-link:hover {
+  background-color: rgb(29, 143, 0);
+}
